@@ -17,6 +17,11 @@ if(_vehicle getVariable "tracked") exitWith {hint "Es befindet sich bereits ein 
 _isVehicle = if ((_curTarget isKindOf "landVehicle") || (_curTarget isKindOf "Ship") || (_curTarget isKindOf "Air")) then {true} else {false};
 if (!_isVehicle) exitWith {hint "Dieses Object ist kein Fahrzeug"};
 
+life_action_inUse = true;
+player playMove "AinvPknlMstpSnonWnonDnon_medic_1";
+sleep 4;
+life_action_inUse = false;
+
 [false,"gpstracker",1] call life_fnc_handleInv;
 _vehicle setVariable ["tracked",true,true];
 [[_vehicle,_caller],"life_fnc_gpsMarker",_caller,false] spawn life_fnc_MP;
