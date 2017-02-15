@@ -124,7 +124,9 @@ if (playerSide isEqualTo west) then {
         };
     };
 
-    _Btn4 ctrlShow false;
+    _Btn4 ctrlSetText localize "Add GPS Tracker";
+    _Btn4 buttonSetAction "[life_vInact_curTarget, player] spawn life_fnc_addGPSTracker";
+
     _Btn5 ctrlShow false;
     _Btn6 ctrlShow false;
 };

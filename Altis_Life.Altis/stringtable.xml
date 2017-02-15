@@ -6969,6 +6969,17 @@
             <Portuguese>Blindfold</Portuguese>
             <Polish>Blindfold</Polish>
         </Key>
+        <Key ID="STR_Item_GPSTracker">
+            <Original>GPS Tracker</Original>
+            <Czech>GPS Tracker</Czech>
+            <Spanish>GPS Tracker</Spanish>
+            <Russian>GPS Tracker</Russian>
+            <German>GPS Tracker</German>
+            <French>GPS Tracker</French>
+            <Italian>GPS Tracker</Italian>
+            <Portuguese>GPS Tracker</Portuguese>
+            <Polish>GPS Tracker</Polish>
+        </Key>
     </Package>
     <Package name="Life_License">
         <Key ID="STR_License_Driver">

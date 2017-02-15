@@ -27,7 +27,7 @@ class VirtualShops {
         name = "STR_Shops_Rebel";
         side = "civ";
         conditions = "license_civ_rebel";
-        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge" };
+        items[] = { "waterBottle", "rabbit", "apple", "redgull", "tbacon", "lockpick", "pickaxe", "toolkit", "fuelFull", "peach", "boltcutter", "blastingcharge", "gpstracker" };
     };
 
     class gang {
@@ -863,6 +863,16 @@ class VirtualItems {
         buyPrice = 1000;
         sellPrice = 100;
         illegal = false;
+        edible = -1;
+    };
+
+    class gpstracker {
+        variable = "gpstracker";
+        displayName = "STR_Item_GPSTracker";
+        weight = 1;
+        buyPrice = 1000;
+        sellPrice = 100;
+        illegal = true;
         edible = -1;
     };
 };
