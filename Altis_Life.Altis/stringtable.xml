@@ -6958,6 +6958,17 @@
             <Portuguese>Tapete de Espinhos</Portuguese>
             <Polish>Kolczatka drogowa</Polish>
         </Key>
+        <Key ID="STR_Item_Blindfold">
+            <Original>Blindfold</Original>
+            <Czech>Blindfold</Czech>
+            <Spanish>Blindfold</Spanish>
+            <Russian>Blindfold</Russian>
+            <German>Augenbinde</German>
+            <French>Blindfold</French>
+            <Italian>Blindfold</Italian>
+            <Portuguese>Blindfold</Portuguese>
+            <Polish>Blindfold</Polish>
+        </Key>
     </Package>
     <Package name="Life_License">
         <Key ID="STR_License_Driver">

@@ -125,7 +125,7 @@ class VirtualShops {
         name = "STR_Shops_Cop";
         side = "cop";
         conditions = "";
-        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator" };
+        items[] = { "donuts", "coffee", "spikeStrip", "waterBottle", "rabbit", "apple", "redgull", "toolkit", "fuelFull", "defusekit", "defibrillator", "blindfold" };
     };
 };
 
@@ -854,5 +854,15 @@ class VirtualItems {
         illegal = false;
         edible = 100;
         icon = "icons\ico_muttonLeg.paa";
+    };
+
+    class blindfold {
+        variable = "blindfold";
+        displayName = "STR_Item_Blindfold";
+        weight = 1;
+        buyPrice = 1000;
+        sellPrice = 100;
+        illegal = false;
+        edible = -1;
     };
 };

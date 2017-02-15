@@ -14,9 +14,10 @@
 #define Btn6 37455
 #define Btn7 37456
 #define Btn8 37457
+#define Btn9 37458
 #define Title 37401
 
-private ["_display","_curTarget","_seizeRank","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8"];
+private ["_display","_curTarget","_seizeRank","_Btn1","_Btn2","_Btn3","_Btn4","_Btn5","_Btn6","_Btn7","_Btn8","_Btn9"];
 
 disableSerialization;
 _curTarget = param [0,objNull,[objNull]];
@@ -41,6 +42,7 @@ _Btn5 = _display displayCtrl Btn5;
 _Btn6 = _display displayCtrl Btn6;
 _Btn7 = _display displayCtrl Btn7;
 _Btn8 = _display displayCtrl Btn8;
+_Btn9 = _display displayCtrl Btn9;
 life_pInact_curTarget = _curTarget;
 
 if (player getVariable ["isEscorting",false]) then {
@@ -82,6 +84,16 @@ _Btn7 buttonSetAction "[life_pInact_curTarget] call life_fnc_putInCar; closeDial
 //SeizeWeapons Button
 _Btn8 ctrlSetText localize "STR_pInAct_Seize";
 _Btn8 buttonSetAction "[life_pInact_curTarget] spawn life_fnc_seizePlayerAction; closeDialog 0;";
+
+if((_curTarget getVariable["blindfolded",false])) then
+{
+	_Btn9 ctrlSetText "Augen öffnen";
+	_Btn9 buttonSetAction "[[life_pInact_curTarget],""life_fnc_notBlind"",life_pInact_curTarget,false] spawn life_fnc_MP; [true,""blindfold"",1] call life_fnc_handleInv; closeDialog 0;";
+} else
+{
+	_Btn9 ctrlSetText "Augen verbinden";
+	_Btn9 buttonSetAction "[[life_pInact_curTarget, player],""life_fnc_blind"",player,false] spawn life_fnc_MP; closeDialog 0;";
+};
 
 if (FETCH_CONST(life_coplevel) < _seizeRank) then {_Btn8 ctrlEnable false;};
 
